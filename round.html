@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin CPU Scheduling</title>
+    <link rel="stylesheet" href="round.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Round Robin CPU Scheduling</h2>
+        
+        <div>
+            <label for="quantum">Time Quantum:</label>
+            <input type="number" id="quantum" value="2" min="1">
+        </div>
+
+        <div>
+            <h3>Add Process</h3>
+            <input type="text" id="processName" placeholder="Process Name">
+            <input type="number" id="arrivalTime" placeholder="Arrival Time">
+            <input type="number" id="burstTime" placeholder="Burst Time">
+            <button onclick="addProcess()">Add Process</button>
+        </div>
+
+        <button onclick="calculateScheduling()">Calculate Schedule</button>
+
+        <div>
+            <h3>Process Table</h3>
+            <table id="processTable">
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Completion Time</th>
+                    <th>Turnaround Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Gantt Chart</h3>
+            <div id="ganttChart" class="gantt-chart"></div>
+        </div>
+    </div>
+    <script src="round.js"></script>
+<div>
+</body>
+</html>
